@@ -1,0 +1,771 @@
+html {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth; /* Scroll yang smooth saat link digunakan */
+}
+/* Title utama web */
+.Judul {
+    margin-top: -24px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
+    white-space: nowrap;
+    margin: 0 auto;
+    animation: typing 3.5s steps(40, end); /* Efek mengetik */
+    font-size: 2.5rem;
+}   
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+/* Sub-judul */
+.subjudul {
+    text-align: center;
+    margin-top: -27px ;
+    overflow: hidden;
+    white-space: nowrap;
+    animation: typing 3s ease-out;
+    margin: 0 auto;
+    right: 40vw;
+}
+
+/* Bagian tentang saya */
+.bio {
+    text-align: justify;
+    font-family: Montserrat, sans-serif;
+    line-height: 1.5em;
+    margin:  auto;
+    margin-top: 5em;
+    padding: 20px;
+    background: #FCDF78;
+    border-radius: 15px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3);
+    max-width: 800px; /* Batas maksimal lebar */
+}
+
+/* Animasi border */
+.border {
+    position: relative;
+    inset: 30em;
+    border: solid black 5px;
+    width: 50%;
+    animation: borderanimasi linear;
+    animation-timeline: view();
+    animation-range: cover 1%;
+}
+
+/* Garis animasi */
+.garis {
+    display: inline-flex;
+    position: absolute;
+    height: 1px;
+    width: 3px;
+    background-color: black;
+    inset: 25em;
+    margin-left: 23em;
+    margin-top: 37em;
+}
+
+.garis {
+    animation: garis linear;
+    animation-timeline: view();
+    animation-range: cover 40%;
+}
+
+.garis p {
+    visibility: hidden;
+}
+
+@keyframes garis {
+    from { height: 1px; }
+    to { height: 1000px; opacity: 0; }
+}
+
+@keyframes borderanimasi {
+    from { transform: translateX(600px); }
+    to { transform: translateX(-600px); }
+}
+
+/* Pendidikan SMA */
+.PendidikanSma {
+    position: relative;
+    text-align: right;
+    margin-right: 6em;
+    margin-top: 44em;
+    line-height: 1.5;
+    font-family: Montserrat;
+    margin-left: 60em;
+}
+
+
+@keyframes slidekanan {
+    from {
+        transform: translateX(600px);
+        filter: blur(5px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+@keyframes slidekiri {
+    from {
+        transform: translateX(-600px);
+        filter: blur(5px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(600px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+.PendidikanSma {
+    animation: slidekanan linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+/* Bagian kuliah */
+.Kuliah {
+    margin-left: 4em;
+    font-family: Montserrat;
+    line-height: 1.5;
+    position: relative;
+    margin-right: 50em;
+    margin-top: 2em;
+}
+
+
+.Kuliah {
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+/* Style untuk aplikasi yang digunakan */
+.containerr {
+    display: grid;
+}
+
+.software {
+    position: relative;
+    margin-left: 3em;
+    margin-top: 15rem;
+    text-align: center;
+    transition: all ease-in-out 0.5s;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    animation: all ease-in-out;
+    
+}
+
+.software {
+    animation: foto ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 10%;
+}
+.garisbawah{
+    border: solid black 5px;
+    width: 30%;
+    animation: slidekiri linear;
+    animation-timeline: view();
+    animation-range: cover 1%;
+}
+
+/* Animasi foto di 'tentang saya' */
+@keyframes foto {
+    from { filter: blur(10px); }
+    to { filter: blur(0px); }
+}
+.foto {
+    display: flex;
+    position: relative;
+    top: 1em;
+    left: 35em;
+    overflow: hidden;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 24%;
+    width: 270px;
+    height: 270px;
+    box-shadow: 5px 10px #888; /* Bayangan untuk gambar */
+}
+
+.foto {
+    animation: foto ease-in-out 2s; /* Animasi gambar */
+}
+
+/* Navbar styling */
+.button {
+    display: flex;
+    letter-spacing: 0.1em;
+    justify-content: center;
+    transition: all ease-in-out 0.5s;
+    margin-right: -1em;
+    background-color: rgb(241, 211, 156);
+    box-shadow: 5px 3px #585858;
+    border-radius: 15px;
+    margin-top: -1em;
+}
+
+nav ul {
+    display: inline-flex;
+    list-style: none;
+    gap: 3rem;
+}
+
+nav ul li a {
+    color: black;
+    font-weight: 300;
+    text-decoration: none;
+    opacity: 40%;
+}
+
+nav ul li a:hover {
+    opacity: 100%;
+    text-decoration: underline;
+}
+
+/* Bagian project */
+.project {
+    margin-top: -8rem;
+    display: inline-block;
+    border-image-width: auto;
+}
+
+@keyframes appear {
+    from {
+        opacity: 0%;
+        filter: blur(5px);
+        transform: translateX(-600px);
+    }
+    to {
+        opacity: 100%;
+        filter: blur(0px);
+        transform: translateX(0px);
+    }
+}
+
+@keyframes fadein {
+    from { opacity: 0; filter: blur(10px); }
+    to { opacity: 1; filter: blur(0px); }
+}
+
+body {
+    animation: fadein ease 2s;
+    background-image: url(WhatsApp\ Image\ 2024-10-19\ at\ 09.49.41.jpeg);
+    background-size: cover;
+    overflow-x: hidden;
+}
+
+.wraper {
+    display: grid;
+}
+
+/* Styling foto project */
+.fotoprojek {
+    margin-top: 2em;
+    margin-left: -25em;
+    gap: 1em;
+    transition: all cubic-bezier(0.00 1.00 0.51 1.00) 1s;
+    animation: slidekanan linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+}
+
+/* Animasi judul Blender */
+.blender {
+    display: flex;
+    font-family: Montserrat;
+    text-align: center;
+    margin-left: 14em;
+    margin-top: 18em;
+    animation: slidekanan linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+.blender:hover {
+    text-decoration: underline;
+}
+
+.fotoprojek p {
+    text-align: justify;
+    justify-content: center;
+    font-family: Montserrat;
+    position: absolute;
+    margin-left: 95em;
+    margin-top: 4em;
+    line-height: 1.5;
+}
+
+.animasi {
+    margin-top: -2em;
+    gap: 11em;
+    margin-left: -2em;
+    justify-content: space-between;
+    position: relative;
+    transition: all cubic-bezier(0.00 1.00 0.51 1.00) 1s;
+    animation: slidekanan linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+}
+
+/* Judul animasi */
+.judulAnimasi {
+    display: flex;
+    font-family: Montserrat;
+    text-align: center;
+    margin-left: 30em;
+    margin-top: 11em;
+    margin-bottom: 7em;
+    animation: fadein linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 20%;
+}
+.contact{
+    margin-top: 11em;
+    border: 5px solid black;
+    border-radius: 15px;
+    animation: foto ease-in-out;
+    animation-timeline: view();
+    animation-range: entry 0% cover 10%;
+}
+.contact ul {
+    gap: 1.5em;
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+.contact li a {
+    line-height: 1.5em;
+    color: black;
+    text-decoration: none;
+}
+.contact ul li a:hover{
+text-decoration: underline;
+}
+.dworld{
+    display: column;
+    position: relative;
+    margin-right: 14em;
+    margin-top: 10em;
+    animation: slidekanan linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+
+
+@media (max-width: 850px)and (orientation: portrait){
+    .Judul {
+        font-size: 1.3rem;
+        margin-top: 10px;
+        padding: 10px;
+    }
+    .subjudul{
+        font-size: 0.8rem;
+    }
+    .bio {
+        margin: 20px;
+        scale: 1px;
+        padding: 15px;
+        margin-top: 4em;
+        font-size: 1rem;
+    }
+
+    .border {
+        width: 100%;
+        inset: 7em;
+        border-width: 2px;
+    }
+    .garis{
+        left: 2em;
+    }
+    .PendidikanSma, .Kuliah {
+        margin-left: 1em;
+        margin-right: 0;
+        margin-top: 10em;
+    }
+    .PendidikanSma,.Kuliah p {
+        text-align: justify;
+    }
+
+    .software {
+        margin-left: 0;
+        margin-top: 3em;
+        font-size: 1rem;
+    }
+
+   
+    .fotoprojek {
+        display: block;
+        scale: 0.68;
+        gap: 0em;
+        margin-left: -8em;
+        margin-top: -7em;
+        width: 80%;
+    }
+    .fotoprojek img {
+        scale: 0.82;
+        gap: 0;
+    }
+    .fotoprojek p {
+        font-size: 0.89rem;
+        text-align: justify;
+        margin-top: 5em;
+        margin-left: 33em;
+    }
+    .blender {
+        margin-left: 1em;
+        margin-top: 1em;
+        font-size: 1.5rem;
+    }
+    .animasi{
+        margin-left: -3em;
+        scale: 0.75;
+        margin-right: 12em;
+    }
+    .judulAnimasi{
+        margin-left: -8em;
+        display: flex;
+        justify-content: center; 
+        align-items: center;     
+        height: 12vh;
+        width: 100%;         
+    }
+    .dworld{
+        scale: 0.65;
+        margin-top: -10em;
+        margin-left: -11em;
+        margin-right: 5em;
+    }
+    .dworld p{
+        font-size: 25px;
+        margin-left: 4em;
+
+        margin-right: 5em;
+    }
+    .foto {
+
+        position: relative;
+        scale: -14em;
+        left: 3em;
+        top: 1em;
+        width: 250px;
+        height: 250px;
+    }
+
+    .contact {
+        width: 50%;
+        margin-top: 2em;
+        margin-left: 1em;
+        padding: 10px;
+    }
+
+    .contact ul {
+        display: flex;
+        justify-content: center;
+        gap: 4em;
+    }
+
+    .contact ul li a {
+        margin-left: -2em;
+        text-align: center;
+        font-size: 1rem;
+        
+    }
+}
+    .button{
+        display:grid;
+        width: 100%;
+        padding: 5px;
+        text-align: center;
+    }
+
+    ul li a:hover{
+        background-color: #FCDF78;
+
+    }
+    @media (max-width: 850px) {
+        nav ul  {
+            flex-direction: column;
+            gap: 0.4em;
+            left: -5em;
+
+            text-align: center; 
+        }
+    }
+    
+    @media (min-width: 850px) {
+        nav ul {
+            flex-direction: row; 
+        }
+    }
+    @media (max-width:768px) and (orientation: landscape){ /*tampilan layar landscape*/
+        .Judul {
+            font-size: 1.3rem;
+            margin-top: 10px;
+            padding: 10px;
+        }
+        .subjudul{
+            font-size: 0.8rem;
+        }
+        .bio {
+            margin: 20px;
+            scale: 1px;
+            padding: 15px;
+            margin-top: 4em;
+            font-size: 1rem;
+        }
+    
+        .border {
+            width: 100%;
+            inset: 7em;
+            border-width: 2px;
+        }
+        .garis{
+            left: 25em;
+        }
+        .PendidikanSma, .Kuliah {
+            margin-left: 1em;
+            margin-right: 0;
+            margin-top: 10em;
+        }
+        .PendidikanSma,.Kuliah p {
+            text-align: justify;
+        }
+    
+        .software {
+            margin-left: 0;
+            margin-top: 3em;
+            font-size: 1rem;
+        }
+    
+       
+        .fotoprojek {
+ 
+            scale: 1;
+            gap: 0em;
+            margin-left: -2em;
+            margin-top: 0em;
+            width: 80%;
+        }
+        .fotoprojek img {
+            scale: 0.82;
+            gap: 0;
+        }
+        .fotoprojek p {
+            font-size: 0.89rem;
+            text-align: justify;
+            margin-top: 5em;
+            margin-left: 41em;
+        }
+        .blender {
+            margin-left: 9em;
+            margin-top: 1em;
+            font-size: 1.5rem;
+        }
+        .animasi{
+            margin-left: 9em;
+            scale:  0.99;
+            margin-top: -10em;
+            margin-right: 12em;
+        }
+        .judulAnimasi{
+            font-size: 2rem;
+            margin-left: -1em;
+            display: flex;
+            justify-content: center; 
+            align-items: center;     
+            height: 12vh;
+            width: 100%;         
+        }
+        .dworld{
+            scale: 0.89;
+            margin-top: -3em;
+            margin-left: -6em;
+            margin-right: -3em;
+        }
+        .dworld p{
+            font-size: 25px;
+            margin-left: 4em;
+    
+            margin-right: 5em;
+        }
+        .foto {
+            position: relative;
+            scale: -14em;
+            left: 16em;
+            top: 1em;
+            width: 250px;
+            height: 250px;
+        }
+    
+        .contact {
+            height: 80%;
+            width: 90%;
+            margin-top: 2em;
+            margin-left: 1em;
+            padding: 10px;
+        }
+    
+        .contact ul {
+            display: flex;
+            justify-content: center;
+            gap: 4em;
+        }
+    
+        .contact ul li a {
+            margin-left: -2em;
+            text-align: center;
+            font-size: 1rem;
+            
+        }
+    }
+        .button{
+            display:grid;
+            width: 100%;
+            padding: 5px;
+            text-align: center;
+        }
+    
+        ul li a:hover{
+            background-color: #FCDF78;
+    }
+    @media(min-height:1024px){ /*tampilan layar untuk tab*/
+        .Judul {
+            font-size: 1.3rem;
+            margin-top: 10px;
+            padding: 10px;
+        }
+        .subjudul{
+            font-size: 0.8rem;
+        }
+        .bio {
+            margin: 20px;
+            scale: 1px;
+            padding: 15px;
+            margin-top: 4em;
+            font-size: 1rem;
+        }
+    
+        .border {
+            width: 100%;
+            inset: 7em;
+            border-width: 2px;
+        }
+        .garis{
+            left: 25em;
+        }
+        .PendidikanSma, .Kuliah {
+            margin-left: 1em;
+            margin-right: 0;
+            margin-top: 10em;
+        }
+        .PendidikanSma,.Kuliah p {
+            text-align: justify;
+        }
+    
+        .software {
+            margin-left: 0;
+            margin-top: 3em;
+            font-size: 1rem;
+        }
+    
+       
+        .fotoprojek {
+ 
+            scale: 1;
+            gap: 0em;
+            margin-left: -2em;
+            margin-top: 0em;
+            width: 80%;
+        }
+        .fotoprojek img {
+            scale: 0.82;
+            gap: 0;
+        }
+        .fotoprojek p {
+            font-size: 0.89rem;
+            text-align: justify;
+            margin-top: 5em;
+            margin-left: 41em;
+        }
+        .blender {
+            margin-left: 9em;
+            margin-top: 1em;
+            font-size: 1.5rem;
+        }
+        .animasi{
+            margin-left: 9em;
+            scale:  0.99;
+            margin-top: -10em;
+            margin-right: 12em;
+        }
+        .judulAnimasi{
+            font-size: 2rem;
+            margin-left: -1em;
+            display: flex;
+            justify-content: center; 
+            align-items: center;     
+            height: 12vh;
+            width: 100%;         
+        }
+        .dworld{
+            scale: 0.89;
+            margin-top: -3em;
+            margin-left: -6em;
+            margin-right: -3em;
+        }
+        .dworld p{
+            font-size: 25px;
+            margin-left: 4em;
+    
+            margin-right: 5em;
+        }
+        .foto {
+    
+            position: relative;
+            scale: -14em;
+            left: 17em;
+            top: 1em;
+            width: 250px;
+            height: 250px;
+        }
+    
+        .contact {
+            height: 80%;
+            width: 90%;
+            margin-top: 2em;
+            margin-left: 1em;
+            padding: 10px;
+        }
+    
+        .contact ul {
+            display: flex;
+            justify-content: center;
+            gap: 4em;
+        }
+    
+        .contact ul li a {
+            margin-left: -2em;
+            text-align: center;
+            font-size: 1rem;
+            
+        }
+    }
+        .button{
+            display:grid;
+            width: 100%;
+            padding: 5px;
+            text-align: center;
+        }
+    
+        ul li a:hover{
+            background-color: #FCDF78;
+    }
