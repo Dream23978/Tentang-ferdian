@@ -260,6 +260,7 @@ body {
     animation: fadein ease 2s;
     background-image: url(WhatsApp\ Image\ 2024-10-19\ at\ 09.49.41.jpeg);
     background-size: cover;
+    overflow-x: hidden;
 }
 
 .wraper {
