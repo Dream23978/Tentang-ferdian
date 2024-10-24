@@ -362,6 +362,7 @@ text-decoration: underline;
 
 
 @media (max-width: 850px)and (orientation: portrait){
+    body{ overflow-x: hidden;}
     .Judul {
         font-size: 1.3rem;
         margin-top: 10px;
@@ -507,6 +508,7 @@ text-decoration: underline;
         }
     }
     @media (max-width:768px) and (orientation: landscape){ /*tampilan layar landscape*/
+        body{ overflow-x: hidden;}
         .Judul {
             font-size: 1.3rem;
             margin-top: 10px;
@@ -769,3 +771,4 @@ text-decoration: underline;
         ul li a:hover{
             background-color: #FCDF78;
     }
+     body{ overflow-x: hidden;}
